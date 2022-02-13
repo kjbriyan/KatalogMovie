@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">KatalogMovie</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="search_movie_series">Search movie series</string>
+    <string name="popular_text">Popular</string>
+    <string name="see_all_text">See all</string>
+    <string name="rating_text">rating</string>
+    <string name="you_may_like_text">You may like</string>
+    <string name="genre_movie_text">Eng | Action, Sci-fi | 3h10m</string>
+    <string name="title_movie_text">Maleficent</string>
+    <string name="story_line_text">Story Line</string>
+    <string name="review_text">Review</string>
+    <string name="lorem_ipsum_text">Lorem ipsum, utawa ringkesé lipsum, iku tèks standar sing dipasang kanggo nuduhaké èlemèn grafis utawa presentasi visual kaya font, tipografi, lan tata letak.</string>
+    <string name="movie_poster">Movie Poster</string>
+    <string name="image_backdrop">Image Backdrop</string>
+    <string name="production_companies_text">Production Companies</string>
+    <string name="img_companies">img companies</string>
+    <string name="trailers">Trailers</string>
+    <string name="img_banner_movie">Img Banner Movie</string>
+    <string name="title_error">Terjadi masalah !</string>
+    <string name="title_error_content">Tenang, masalah akan segera teratasi</string>
+    <string name="title_error_ok">Coba lagi</string>
+    <string name="title_content_des_info">Image</string>
+</resources>

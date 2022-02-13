@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:paddingTop="8dp">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/materialCardView2"
+            android:layout_width="120dp"
+            android:layout_height="170dp"
+            android:foreground="@drawable/bg_ripple"
+            app:cardCornerRadius="8dp">
+
+            <ImageView
+                android:id="@+id/imgBannerMovie"
+                android:background="@color/md_grey_600"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/img_banner_movie"
+                android:scaleType="centerCrop"/>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tvRatingMovie"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/rounded_corner"
+        android:drawablePadding="8dp"
+        android:gravity="center"
+        android:maxEms="5"
+        android:maxLines="1"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/relativeLayout"
+        app:layout_constraintStart_toEndOf="@+id/relativeLayout"
+        tools:text="8.7" />
+
+    <TextView
+        android:id="@+id/tvTitleMovie"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:layout_marginEnd="16dp"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/relativeLayout"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/title_movie_text" />
+
+    <TextView
+        android:id="@+id/tvViewersMovie"
+        android:layout_width="0dp"
+        android:textColor="@color/grey_soft"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/tvTitleMovie"
+        app:layout_constraintStart_toStartOf="@+id/tvTitleMovie"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitleMovie"
+        tools:text="16.777 Viewers" />
+
+    <TextView
+        android:id="@+id/tvYearMovie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_border_orange"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="4dp"
+        android:textColor="@color/orange"
+        app:layout_constraintStart_toStartOf="@+id/tvViewersMovie"
+        app:layout_constraintTop_toBottomOf="@+id/tvViewersMovie"
+        tools:text="1995" />
+
+    <TextView
+        android:id="@+id/tvGenreMovie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_border_orange"
+        android:paddingStart="8dp"
+        android:paddingTop="2dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="4dp"
+        android:textColor="@color/orange"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/tvYearMovie"
+        app:layout_constraintTop_toBottomOf="@+id/tvViewersMovie"
+        tools:text="Comedy" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
