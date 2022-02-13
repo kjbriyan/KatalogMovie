@@ -87,6 +87,6 @@ class DetailPresenter(private val view: DetailView) {
             parameters["page"] = page.toString()
             Log.d("PAGEE", "$page")
             getReview(id,page)
-        }, 4000)
+        }, 3000)
     }
 }

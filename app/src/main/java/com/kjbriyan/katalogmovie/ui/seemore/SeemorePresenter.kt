@@ -60,6 +60,6 @@ class SeemorePresenter(private val view: SeemoreView) {
             }else {
                 getNow(page)
             }
-        }, 4000)
+        }, 3000)
     }
 }
