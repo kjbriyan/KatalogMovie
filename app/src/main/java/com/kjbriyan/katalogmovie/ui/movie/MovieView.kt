@@ -10,7 +10,7 @@ interface MovieView {
     fun onHideLoadingPopular()
     fun onHideLoadingNow()
     fun onDataloadedPopular(results : List<ResultsItem?>?)
-    fun onDataloadedTop(results : List<DataTop?>?)
+    fun onDataloadedTop(results : List<ResultsItems?>?)
     fun onDataloadedNow(results : List<ResultsItems?>?)
     fun onDataeror (message : Throwable)
 

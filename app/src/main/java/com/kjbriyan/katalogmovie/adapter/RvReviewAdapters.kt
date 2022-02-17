@@ -23,8 +23,8 @@ class RvReviewAdapters : RecyclerView.Adapter<RvReviewAdapters.UsersViewHolder>(
             val tvUname = itemView.findViewById<TextView>(R.id.tvUname)
             val tvReview = itemView.findViewById<TextView>(R.id.tvReviews)
 
-            tvUname.setText(get?.author.toString())
-            tvReview.setText(get?.content.toString())
+            tvUname.text = get?.author.toString()
+            tvReview.text = get?.content.toString()
             val img = get?.authorDetails?.avatarPath?.substring(1)
             val imghttp = "https://secure.gravatar.com/avatar/"
             var urlimg = ""

@@ -28,8 +28,8 @@ class PagerMovieAdapter(var data: List<ResultsItems?>?) :
             val rating = itemView.findViewById<TextView>(R.id.tv_rating_movie)
             val item  = itemView.findViewById<MaterialCardView>(R.id.item_top)
 
-            title.setText(get?.title.toString())
-            rating.setText(get?.voteAverage.toString())
+            title.text = get?.title.toString()
+            rating.text = get?.voteAverage.toString()
             Glide.with(itemView)
                 .load(InitRetrofit().IMAGE+get?.backdropPath)
                 .transition(DrawableTransitionOptions.withCrossFade())

@@ -37,8 +37,8 @@ class RvAdapterPopular(var data: List<ResultsItem?>?) :
             val tv_tittle  = itemView.findViewById<TextView>(R.id.tv_title_movie)
             val tv_rating = itemView.findViewById<TextView>(R.id.tvRatingMovie)
 
-            tv_tittle.setText(get?.title.toString())
-            tv_rating.setText(get?.voteAverage.toString())
+            tv_tittle.text = get?.title.toString()
+            tv_rating.text = get?.voteAverage.toString()
             Glide.with(itemView)
                 .load(InitRetrofit().IMAGE+get?.posterPath)
                 .transition(DrawableTransitionOptions.withCrossFade())

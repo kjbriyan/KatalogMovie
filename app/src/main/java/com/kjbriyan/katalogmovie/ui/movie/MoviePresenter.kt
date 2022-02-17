@@ -32,7 +32,7 @@ class MoviePresenter(private val view: MovieView) {
 
     fun getNow(){
         view.onShowLoading()
-        InitRetrofit().getInstance().getNowplay().enqueue(object : Callback<ResponseNowMovie> {
+        InitRetrofit().getInstance().getNowplayall(1).enqueue(object : Callback<ResponseNowMovie> {
             override fun onResponse(
                 call: Call<ResponseNowMovie>,
                 response: Response<ResponseNowMovie>
@@ -51,17 +51,17 @@ class MoviePresenter(private val view: MovieView) {
 
     fun getTop(){
         view.onShowLoading()
-        InitRetrofit().getInstance().getTop().enqueue(object : Callback<ResponseTopMovie> {
+        InitRetrofit().getInstance().getTopall(1).enqueue(object : Callback<ResponseNowMovie> {
             override fun onResponse(
-                call: Call<ResponseTopMovie>,
-                response: Response<ResponseTopMovie>
+                call: Call<ResponseNowMovie>,
+                response: Response<ResponseNowMovie>
             ) {
                 Helper().debuger(response.body().toString())
                 view.onDataloadedTop(response.body()?.results)
                 view.onHideLoadingTop()
             }
 
-            override fun onFailure(call: Call<ResponseTopMovie>, t: Throwable) {
+            override fun onFailure(call: Call<ResponseNowMovie>, t: Throwable) {
                 view.onHideLoadingTop()
                 view.onDataeror(t)
             }

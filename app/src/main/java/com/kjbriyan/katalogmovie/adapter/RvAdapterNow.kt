@@ -16,7 +16,7 @@ import com.kjbriyan.katalogmovie.model.ResultsItems
 import com.kjbriyan.katalogmovie.network.InitRetrofit
 import com.kjbriyan.katalogmovie.ui.detailmovie.DetailActivity
 
-class RvAdapterNow (var data: List<DataTop?>?) :
+class RvAdapterNow (var data: List<ResultsItems?>?) :
     RecyclerView.Adapter<RvAdapterNow.MyHolder>() {
 
 
@@ -35,13 +35,13 @@ class RvAdapterNow (var data: List<DataTop?>?) :
 
 
     inner class MyHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        fun bind(get: DataTop?) {
+        fun bind(get: ResultsItems?) {
             val iv  = itemView.findViewById<ImageView>(R.id.iv_movie_poster)
             val tv_tittle  = itemView.findViewById<TextView>(R.id.tv_title_movie)
             val tv_rating = itemView.findViewById<TextView>(R.id.tvRatingMovie)
 
-            tv_tittle.setText(get?.title.toString())
-            tv_rating.setText(get?.voteAverage.toString())
+            tv_tittle.text = get?.title.toString()
+            tv_rating.text = get?.voteAverage.toString()
             Glide.with(itemView)
                 .load(InitRetrofit().IMAGE+get?.posterPath)
                 .transition(DrawableTransitionOptions.withCrossFade())

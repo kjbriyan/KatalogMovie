@@ -92,7 +92,7 @@ class MovieFragment : Fragment(R.layout.fragment_movie), MovieView {
         }
     }
 
-    override fun onDataloadedTop(results: List<DataTop?>?) {
+    override fun onDataloadedTop(results: List<ResultsItems?>?) {
 
 
         if (results!!.isNotEmpty()) {

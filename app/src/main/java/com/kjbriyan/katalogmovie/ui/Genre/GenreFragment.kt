@@ -12,9 +12,6 @@ import com.kjbriyan.katalogmovie.R
 class GenreFragment : Fragment(R.layout.fragment_genre) {
     // TODO: Rename and change types of parameters
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-    }
     companion object {
         fun newIntance(): GenreFragment {
             return GenreFragment()

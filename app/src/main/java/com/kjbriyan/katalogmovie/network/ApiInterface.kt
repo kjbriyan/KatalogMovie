@@ -4,16 +4,10 @@ import com.kjbriyan.katalogmovie.model.*
 import retrofit2.Call
 import retrofit2.http.*
 
-public interface ApiInterface {
+interface ApiInterface {
 
     @GET("popular")
     fun getPopular(): Call<ResponsePopularMovie>
-
-    @GET("now_playing")
-    fun getNowplay(): Call<ResponseNowMovie>
-
-    @GET("top_rated")
-    fun getTop(): Call<ResponseTopMovie>
 
     @GET("{id}")
     fun getDetail(

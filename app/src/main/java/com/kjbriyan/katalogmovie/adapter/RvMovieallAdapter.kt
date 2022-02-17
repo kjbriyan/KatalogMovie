@@ -40,10 +40,10 @@ class RvMovieallAdapter(var data: ResponseNowMovie?) :
             val tv_genre = itemView.findViewById<TextView>(R.id.tvGenreMovie)
 
 
-            tv_viewers.setText(get?.popularity.toString())
-            tv_years.setText(get?.releaseDate.toString())
-            tv_tittle.setText(get?.title.toString())
-            tv_rating.setText(get?.voteAverage.toString())
+            tv_viewers.text = get?.popularity.toString()
+            tv_years.text = get?.releaseDate.toString()
+            tv_tittle.text = get?.title.toString()
+            tv_rating.text = get?.voteAverage.toString()
 //            tv_genre.setText(get?.genreIds)
             Glide.with(itemView)
                 .load(InitRetrofit().IMAGE + get?.backdropPath)

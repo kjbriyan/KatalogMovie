@@ -106,7 +106,7 @@ class DetailActivity : AppCompatActivity(), DetailView {
     override fun onDataReviewload(results:ResponseReviewMovie?) {
         adapters.addList(results?.results as ArrayList<ResultsItemReview>)
         totalPage = results.totalPages!!
-        if (results?.results?.size != 0) {
+        if (results.results.size != 0) {
 
         } else {
             Toast.makeText(this, "Tidak ada Review", Toast.LENGTH_SHORT).show()
